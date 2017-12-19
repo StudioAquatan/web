@@ -1,0 +1,79 @@
+.page-header {
+    background-image: url("../images/aquatan.JPG");
+}
+
+.main {
+    position: relative;
+    z-index: 2;
+}
+
+.info .info-title {
+    margin: 10px auto;
+}
+
+.info {
+    margin: 20px auto;
+}
+
+.fa {
+    text-align: center;
+}
+
+.or-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.or {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+}
+
+.contact-section .container {
+    width: 50%;
+}
+
+.contact-section .info {
+    position: relative;
+    padding: 10px;
+}
+
+a.contact-link {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-indent: -9999px;
+}
+
+a.contact-link:hover {
+    border: 1px solid #51cbce;
+    border-radius: 10px;
+}
+
+.profile-content {
+    padding-top: 0;
+    position: relative;
+    z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-section .container {
+        width: 100%;
+    }
+}
