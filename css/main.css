@@ -73,6 +73,18 @@ a.contact-link:hover {
     z-index: 2;
 }
 
+.profile-tab-item {
+    text-align: center;
+}
+
+.profile-description {
+    margin: 0px auto 20px auto;
+}
+
+.profile-links .btn i {
+    font-size: 30px;
+}
+
 @media screen and (max-width: 768px) {
     .contact-section .container {
         width: 100%;
