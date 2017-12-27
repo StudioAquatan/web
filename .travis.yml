@@ -1,0 +1,17 @@
+addons:
+  ssh_known_hosts: $SSH_HOST
+
+script:
+  - echo ok
+
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_e0de04b896a6_key -iv $encrypted_e0de04b896a6_iv -in deploy_key.enc -out id_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/id_rsa
+  - ssh-add /tmp/id_rsa
+
+deploy:
+  provider: script
+  script: .travis/deploy.sh
+  on:
+    branch: master
