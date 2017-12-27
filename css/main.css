@@ -85,6 +85,40 @@ a.contact-link:hover {
     font-size: 30px;
 }
 
+.flex-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.member-wrapper {
+    margin-bottom: 20px;
+}
+
+.member {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.member-description h3,
+.member-description h6 {
+    margin: 0;
+}
+
+.footer-dark {
+    background-color: #0b1011;
+}
+
 @media screen and (max-width: 768px) {
     .contact-section .container {
         width: 100%;
