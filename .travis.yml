@@ -10,6 +10,6 @@ before_install:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh -o StrictHostKeyChecking=no -i /tmp/deploy_key deploy@aqua.aquatan.studio "docker exec web sh -c 'cd /usr/share/nginx/html && git pull'"
+  script: /bin/bash .travis/deploy.sh
   on:
     branch: master
