@@ -12,6 +12,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: ssh　-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p $SSH_PORT $DEPLOY_USER@$SSH_HOST "docker exec -it web sh -c 'cd /usr/share/nginx/html && git pull'"
+  script: ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p $SSH_PORT $DEPLOY_USER@$SSH_HOST "docker exec -it web sh -c 'cd /usr/share/nginx/html && git pull'"
   on:
     branch: master
