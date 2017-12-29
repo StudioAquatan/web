@@ -111,7 +111,8 @@ a.contact-link:hover {
 }
 
 .member-description h3,
-.member-description h6 {
+.member-description h6,
+.product-name {
     margin: 0;
 }
 
@@ -119,8 +120,47 @@ a.contact-link:hover {
     background-color: #0b1011;
 }
 
+.achievements-date-title {
+    border-bottom: 1px solid gray;
+    margin-bottom: 40px;
+}
+
+.achievements-list {
+    margin-left: 10%;
+}
+
+.contest-box {
+    margin-bottom: 50px;
+}
+
+.product-name {
+    font-size: 2.5em;
+}
+
+.product-name a {
+    padding-left: 20px;
+}
+
+.product-links a {
+    border-bottom: 1px solid #51cbce;
+    line-height: 2em;
+    margin-right: 20px;
+}
+
+.contest-result {
+    margin-bottom: 20px;
+}
+
+
 @media screen and (max-width: 768px) {
     .contact-section .container {
         width: 100%;
+    }
+
+    .achievements-list {
+        margin: 0;
+    }
+    .contest-thumb-box {
+        padding: 20px;
     }
 }
