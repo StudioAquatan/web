@@ -151,6 +151,21 @@ a.contact-link:hover {
     margin-bottom: 20px;
 }
 
+.navbar .navbar-brand {
+    background: url("../images/logo/logo-blue.png") no-repeat right center;
+    background-size: contain;
+    width: 32px;
+    margin: 0 10px;
+}
+
+.navbar-transparent .navbar-brand {
+    background: url("../images/logo/logo-white.png") no-repeat right center;
+    background-size: contain;
+}
+
+.navbar .navbar-brand span {
+    margin-left: 20px;
+}
 
 @media screen and (max-width: 768px) {
     .contact-section .container {
@@ -162,5 +177,8 @@ a.contact-link:hover {
     }
     .contest-thumb-box {
         padding: 20px;
+    }
+    .navbar-brand {
+        padding-left: 16px;
     }
 }
