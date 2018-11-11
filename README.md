@@ -15,9 +15,13 @@
 * achievements.html
     * 実績一覧
 
-## メモ
+## 個人ページの作り方
 
-画像は圧縮してからまた後でgithubに上げる
+```bash
+$ make mypage NAME="Your Name"
+```
+
+部内Wikiを見て頑張れ．
 
 ## Author
 

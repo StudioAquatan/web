@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: dev lint ;
+.PHONY: dev lint mypage ;
 
 dev:
 	@if ! type yarn > /dev/null 2>&1; then \
@@ -12,4 +12,8 @@ dev:
 lint:
 	./node_modules/htmlhint/bin/htmlhint --ignore node_modules/\*\*
 
+members/$(NAME).html:
+	@cp members/unknown.html members/$(NAME).html
 
+mypage: members/$(NAME).html
+	@echo "Created 'members/$(NAME).html'"
