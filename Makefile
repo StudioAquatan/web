@@ -13,7 +13,7 @@ lint:
 	./node_modules/htmlhint/bin/htmlhint --ignore node_modules/\*\*
 
 members/$(NAME).html:
-	sed -e "s/[uU]nknown/$(NAME)/g" members/unknown.html > members/$(NAME).html
+	@cp members/unknown.html members/$(NAME).html
 
 mypage: members/$(NAME).html
 	@echo "Created 'members/$(NAME).html'"
