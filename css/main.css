@@ -116,6 +116,10 @@ a.contact-link:hover {
     margin: 0;
 }
 
+.ob-og-tag{
+    text-align: center;
+}
+
 .footer-dark {
     background-color: #0b1011;
 }
