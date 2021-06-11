@@ -240,10 +240,10 @@ has-flag@^4.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
-htmlhint@0.14.2:
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/htmlhint/-/htmlhint-0.14.2.tgz#8c55b85390ba10d512bd593af3b175ada06f5ea8"
-  integrity sha512-lUCgGVZ/oyCkpgDkIa5IfClwX8Ppy11Dk7XdeVboAGSmKjIuOKx6yy86WS0W08KFtCRuxftzNy+KdQjM4UjqCA==
+htmlhint@0.15.1:
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/htmlhint/-/htmlhint-0.15.1.tgz#28e1caa89f62ab82130cd37a39d2b7e507ae7019"
+  integrity sha512-uNbgqqBiD2ko4QQOYAHTPwDMluc9X81NwzlrJN7yExCoM6dHNgRFjVI+4TEdRrF/EqUzl1dpMUn7GYbu/qCKmA==
   dependencies:
     async "3.2.0"
     chalk "4.1.0"
