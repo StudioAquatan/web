@@ -1,0 +1,17 @@
+<footer class="footer section-dark">
+  <div class="container">
+    <div class="row">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="{{ .Site.Params.wiki | default "#" }}">Private Wiki</a></li>
+          <li><a href="//twitter.com/{{ .Site.Params.twitter | strings.TrimPrefix "@" }}">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="credits ml-auto">
+        <span class="copyright">
+          © <script>document.write(new Date().getFullYear().toString())</script> {{ .Site.Params.author }}
+        </span>
+      </div>
+    </div>
+  </div>
+</footer> 

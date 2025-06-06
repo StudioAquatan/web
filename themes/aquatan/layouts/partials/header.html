@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="200">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" href="{{ "/" | relURL }}"><span>{{ .Site.Title }}</span></a>
+      <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse"
+              data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-auto">
+        {{ range .Site.Menus.main }}
+        <li class="nav-item">
+          <a href="{{ .URL | relURL }}" class="nav-link">
+            {{ if .Params.icon }}<i class="{{ .Params.icon }}"></i>{{ end }} {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom"
+             href="https://twitter.com/{{ .Site.Params.twitter | strings.TrimPrefix "@" }}/" target="_blank">
+            <i class="fa fa-twitter"></i>
+            <p class="d-lg-none">Twitter</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom"
+             href="https://www.github.com/{{ .Site.Params.github }}" target="_blank">
+            <i class="fa fa-github"></i>
+            <p class="d-lg-none">GitHub</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 

@@ -1,0 +1,78 @@
+{{ define "main" }}
+<div class="page-header page-header-small" data-parallax="true"
+     style="background-image: url('{{ "images/achievement-bg.jpg" | relURL }}');background-position: top;">
+  <div class="filter"></div>
+  <div class="container">
+    <div class="motto text-center">
+      <h1>{{ .Title }}</h1>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 mr-auto ml-auto">
+          {{ .Content }}
+          
+          {{ $products := .Pages.GroupByDate "2006" }}
+          {{ range $products }}
+          <div class="achievements-box">
+            <h2 class="achievements-date-title text-info border-info">{{ .Key }}</h2>
+            <div class="achievements-list">
+              {{ range .Pages }}
+              <div class="row contest-box">
+                <div class="col-12 col-md-3 contest-thumb-box">
+                  {{ if .Params.image }}
+                  <img class="img-thumbnail contest-thumb" src="{{ .Params.image | relURL }}">
+                  {{ end }}
+                </div>
+                <div class="col-12 col-md-9 product-description">
+                  <h3 class="product-name">{{ .Title }}</h3>
+                  {{ if .Params.award }}
+                  <h5 class="contest-result">
+                    <span class="text-danger">{{ .Params.award }}</span> at {{ .Params.event }}
+                    {{ if .Params.team }}（{{ .Params.team }}）{{ end }}
+                  </h5>
+                  {{ else }}
+                  <h5 class="contest-result">
+                    at {{ .Params.event }}
+                    {{ if .Params.team }}（{{ .Params.team }}）{{ end }}
+                  </h5>
+                  {{ end }}
+                  <p class="description">{{ .Content }}</p>
+                  <div class="product-links">
+                    {{ if .Params.github }}
+                    <nobr>
+                      <a href="{{ .Params.github }}">
+                        <i class="fa fa-github"></i> リポジトリ
+                      </a>
+                    </nobr>
+                    {{ end }}
+                    {{ if .Params.adobe_xd }}
+                    <nobr>
+                      <a href="{{ .Params.adobe_xd }}">
+                        <i class="fa fa-image"></i> Adobe XD
+                      </a>
+                    </nobr>
+                    {{ end }}
+                    {{ if .Params.website }}
+                    <nobr>
+                      <a href="{{ .Params.website }}">
+                        <i class="fa fa-globe"></i> Website
+                      </a>
+                    </nobr>
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }} 

@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="page-header page-header-small" data-parallax="true"
+     style="background-image: url('{{ "images/aquatan_zoom1.jpg" | relURL }}');background-position: bottom;">
+  <div class="filter"></div>
+  <div class="container">
+    <div class="motto text-center">
+      <h1>{{ .Title }}</h1>
+      <h3>Click their icons to see more detail</h3>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="section">
+    <div class="container">
+      {{ .Content }}
+      
+      <!-- 現役メンバー -->
+      <h2 class="text-center">現役メンバー</h2>
+      <div class="row">
+        {{ range .Pages }}
+        {{ if not .Params.is_alumnus }}
+        <!-- member section -->
+        <div class="col-12 col-lg-4 col-sm-6 member-wrapper">
+          <div class="row flex-wrapper">
+            <div class="col-5 col-md-4 member">
+              <a href="{{ .Permalink }}">
+                <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}"
+                     class="img-circle img-no-padding img-responsive" />
+              </a>
+            </div>
+            <div class="col-7 col-md-8 member">
+              <div class="member-description">
+                <h3>{{ .Title }}</h3>
+                <h6>{{ .Params.role }}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end member section -->
+        {{ end }}
+        {{ end }}
+      </div>
+
+      <!-- OB/OG -->
+      <hr class="my-5">
+      <h2 class="text-center">OB/OG</h2>
+      <div class="row">
+        {{ range .Pages }}
+        {{ if .Params.is_alumnus }}
+        <!-- member section -->
+        <div class="col-12 col-lg-4 col-sm-6 member-wrapper">
+          <div class="row flex-wrapper">
+            <div class="col-5 col-md-4 member">
+              <a href="{{ .Permalink }}">
+                <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}"
+                     class="img-circle img-no-padding img-responsive" />
+              </a>
+            </div>
+            <div class="col-7 col-md-8 member">
+              <div class="member-description">
+                <h3>{{ .Title }} <small class="text-muted">(OB/OG)</small></h3>
+                <h6>{{ .Params.role }}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end member section -->
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }} 
