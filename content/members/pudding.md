@@ -1,7 +1,7 @@
 ---
 title: "pudding"
 role: "Developer"
-avatar: "images/avatars/pudding.jpg"
+avatar: "images/avatars/pudding.png"
 background: "images/pudding-bg.png"
 twitter: "pudding_info"
 github: "pudding0503"
