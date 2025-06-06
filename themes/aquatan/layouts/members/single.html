@@ -1,0 +1,127 @@
+{{ define "main" }}
+<div
+  class="page-header page-header-xs"
+  data-parallax="true"
+  {{
+  if
+  .Params.background
+  }}
+  style="background-image: url('{{ .Params.background | relURL }}');background-position: center;"
+  {{
+  end
+  }}
+>
+  <div class="filter"></div>
+</div>
+<div class="section profile-content">
+  <div class="container">
+    <div class="owner">
+      <div class="avatar">
+        <img
+          src="{{ .Params.avatar | relURL }}"
+          alt="Circle Image"
+          class="img-circle img-no-padding img-responsive"
+        />
+      </div>
+      <div class="name">
+        <h4 class="title">{{ .Title }}<br /></h4>
+        <h6 class="description">{{ .Params.role }}</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 ml-auto mr-auto text-center">
+        <p class="profile-description">{{ .Params.description }}</p>
+        <div class="text-center profile-links">
+          {{ if .Params.twitter }}
+          <a
+            href="//twitter.com/{{ .Params.twitter }}"
+            class="btn btn-link btn-primary"
+          >
+            <i class="fa fa-twitter"></i>
+          </a>
+          {{ end }} {{ if .Params.github }}
+          <a
+            href="//github.com/{{ .Params.github }}"
+            class="btn btn-link btn-primary"
+          >
+            <i class="fa fa-github"></i>
+          </a>
+          {{ end }} {{ if .Params.website }}
+          <a href="{{ .Params.website }}" class="btn btn-link btn-primary">
+            <i class="fa fa-globe"></i>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <br />
+    {{ if .Params.skills }}
+    <div class="nav-tabs-navigation">
+      <div class="nav-tabs-wrapper">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              data-toggle="tab"
+              href="#skills"
+              role="tab"
+              >できること</a
+            >
+          </li>
+          {{ if .Params.interests }}
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#interests" role="tab"
+              >やってみたいこと</a
+            >
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <!-- Tab panes -->
+    <div class="tab-content following">
+      <div class="tab-pane active" id="skills" role="tabpanel">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <ul class="list-unstyled">
+              {{ range .Params.skills }}
+              <li>
+                <div class="row profile-tab-item">
+                  <div class="col-6"><h5>{{ .name }}</h5></div>
+                  <div class="col-6"><p>{{ .description }}</p></div>
+                </div>
+              </li>
+              <hr />
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ if .Params.interests }}
+      <div class="tab-pane text-center" id="interests" role="tabpanel">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <ul class="list-unstyled">
+              {{ range .Params.interests }}
+              <li>
+                <div class="row profile-tab-item">
+                  <div class="col-6"><h5>{{ .name }}</h5></div>
+                  <div class="col-6"><p>{{ .description }}</p></div>
+                </div>
+              </li>
+              <hr />
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">{{ .Content }}</div>
+    </div>
+  </div>
+</div>
+{{ end }}

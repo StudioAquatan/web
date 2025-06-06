@@ -1,0 +1,96 @@
+{{ define "main" }}
+<div class="page-header" data-parallax="true">
+  <div class="filter"></div>
+  <div class="container">
+    <div class="motto text-center">
+      <h1>{{ .Site.Title | upper }}</h1>
+      <br/>
+      {{ with .Site.Params.joinUs }}
+      <a href="{{ . }}" class="btn btn-primary btn-round"><i class="fa fa-check"></i> JOIN US</a>
+      {{ end }}
+      {{ with .Site.Params.aboutLink }}
+      <a href="{{ . }}">
+        <button type="button" class="btn btn-outline-neutral btn-round">What is "Aquatan"</button>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <h2 class="title">{{ .Site.Params.communityTitle | default "Maker Community" }}</h2>
+          <h5 class="description">
+            {{ .Site.Params.description }}
+          </h5>
+        </div>
+      </div>
+      <br/><br/>
+      <div class="row">
+        {{ range .Site.Params.features }}
+        <div class="col-md-3">
+          <div class="info">
+            <div class="icon icon-danger">
+              <i class="{{ .icon }}"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">{{ .title }}</h4>
+              <p class="description">{{ .description }}</p>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-dark text-center contact-section">
+    <div class="container">
+      <h2 class="title">Keep in touch?</h2>
+      <div class="row">
+        <div class="col-md-5 col-xs-12">
+          <div class="info">
+            <div class="icon icon-primary">
+              <i class="fa fa-fw fa-google"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Google Form</h4>
+              <p>
+                <nobr>連絡可能なメールアドレスを
+                  <wbr>
+                  ご用意ください．
+                </nobr>
+              </p>
+            </div>
+            {{ with .Site.Params.contactForm }}
+            <a class="contact-link" href="{{ . }}">link</a>
+            {{ end }}
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-12">
+          <div class="or-box"><p class="or">or</p></div>
+        </div>
+        <div class="col-md-5 col-xs-12">
+          <div class="info">
+            <div class="icon icon-primary">
+              <i class="fa fa-fw fa-twitter"></i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">{{ .Site.Params.twitter }}</h4>
+              <p>
+                <nobr>どなたからでも
+                  <wbr>
+                  DMを受け付けています．
+                </nobr>
+              </p>
+            </div>
+            <a class="contact-link" href="//twitter.com/{{ .Site.Params.twitter | strings.TrimPrefix "@" }}">link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }} 

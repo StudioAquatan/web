@@ -1,0 +1,57 @@
+baseURL = "https://example.org/"
+languageCode = "ja"
+title = "あくあたん工房"
+theme = "aquatan"
+
+[params]
+description = "京都工芸繊維大学のあくあたん公認大学非公式サークルあくあたん工房の公式Webページです"
+author = "Studio Aquatan"
+twitter = "@StudioAquatan"
+github = "StudioAquatan"
+communityTitle = "Maker Community"
+joinUs = "https://docs.google.com/forms/d/e/1FAIpQLScW7n_vJNIusFHaMX0rt8Jguh8eqtOTb_FO6vYZW7guQVBXyQ/viewform?usp=sf_link"
+aboutLink = "//se.is.kit.ac.jp/ja/portfolio/aquatan/"
+contactForm = "https://docs.google.com/forms/d/e/1FAIpQLScW7n_vJNIusFHaMX0rt8Jguh8eqtOTb_FO6vYZW7guQVBXyQ/viewform?usp=sf_link"
+wiki = "https://studioaquatan.esa.io/"
+
+[[params.features]]
+title = "ものづくり"
+description = "プログラミングやデザイン，電子工作，写真 ...etc<br>分野は問いません．"
+icon = "nc-icon nc-ruler-pencil"
+
+[[params.features]]
+title = "つながり"
+description = "これはコミュニティであり，チームとは異なります．メンバーの中に上下関係はありません．"
+icon = "nc-icon nc-chat-33"
+
+[[params.features]]
+title = "共同作業"
+description = "何かを始めたいとき，ここでメンバーを募集し活動することができます．"
+icon = "fa fa-fw fa-handshake-o"
+
+[[params.features]]
+title = "実績"
+description = "技術系イベントの参加などを通じ，総合的なものづくりとしての実績を積み重ねることが出来ます．"
+icon = "nc-icon nc-trophy"
+
+[menu]
+[[menu.main]]
+name = "Products"
+url = "/products/"
+weight = 1
+[menu.main.params]
+icon = "nc-icon nc-ruler-pencil"
+
+[[menu.main]]
+name = "Members"
+url = "/members/"
+weight = 2
+[menu.main.params]
+icon = "nc-icon nc-circle-10"
+
+[[menu.main]]
+name = "News"
+url = "/news/"
+weight = 3
+[menu.main.params]
+icon = "nc-icon nc-paper"

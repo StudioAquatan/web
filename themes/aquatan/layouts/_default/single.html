@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="page-header page-header-xs" data-parallax="true">
+  <div class="filter"></div>
+  <div class="container">
+    <div class="motto text-center">
+      <h1>{{ .Title }}</h1>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <article>
+            {{ if .Date }}
+            <p class="text-muted">{{ .Date.Format "2006年1月2日" }}</p>
+            {{ end }} {{ .Content }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

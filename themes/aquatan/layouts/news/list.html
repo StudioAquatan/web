@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="page-header page-header-xs" data-parallax="true">
+  <div class="filter"></div>
+  <div class="container">
+    <div class="motto text-center">
+      <h1>{{ .Title }}</h1>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          {{ .Content }} {{ range .Pages }}
+          <article class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h4>
+              <p class="text-muted">
+                {{ .Date.Format "2006年1月2日" }} {{ if .Params.author }} - {{
+                .Params.author }}{{ end }}
+              </p>
+              {{ if .Summary }}
+              <p class="card-text">{{ .Summary }}</p>
+              {{ end }}
+              <a href="{{ .Permalink }}" class="btn btn-primary btn-sm"
+                >続きを読む</a
+              >
+            </div>
+          </article>
+          <br />
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

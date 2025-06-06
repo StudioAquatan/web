@@ -1,0 +1,12 @@
+name = "Aquatan"
+license = "MIT"
+licenselink = "https://github.com/yourname/aquatan-theme/blob/master/LICENSE"
+description = "A modern theme inspired by Studio Aquatan"
+homepage = "https://github.com/yourname/aquatan-theme"
+tags = ["blog", "company", "community", "portfolio"]
+features = ["responsive", "bootstrap", "modern"]
+min_version = "0.41.0"
+
+[author]
+name = "Studio Aquatan"
+homepage = "https://www.aquatan.studio/"
